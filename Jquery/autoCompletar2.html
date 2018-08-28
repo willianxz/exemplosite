@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"> <!-- Essa biblioteca aqui é só pra poder usar as classes de responsividade.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Essa é a biblioteca do Jquery. -->
+<script> 
+$(document).ready(function(){
+
+	//Quando uma tecla for pressionado, quando ela voltar faça:
+	$("input").keyup(function(){ 
+		var nome = $("input[name=nome]").val();	//Declaramos a variavel nome/sobrenome com os dados informados nos inputs
+		var sobrenome = $("input[name=sobrenome").val();
+
+		$("h3").html(nome+' '+sobrenome); //Aqui colocamos o que foi escrito, em nosso elemento h3
+
+		$("input[name=nomeCompleto]").val(nome+' '+sobrenome); //Aqui mostramos que podemos colocar no input disabled(bloqueado)
+
+		$("input[name=nomeCompletoOculto]").val(nome+' '+sobrenome); //E por fim colocamos tambem no input oculto, para demonstrar que podemos.
+
+	});
+	
+
+
+});
+
+</script>
+
+ 
+</head>
+<body>
+
+
+<!-- Aqui temos nossa simulação de um formulario comum.-->
+<div class="w3-row ">
+ <div class="w3-col m12 w3-center">
+  Nome: <input type="text" name="nome" />
+  Sobrenome: <input type="text" name="sobrenome">
+  <h3></h3> <!-- Iremos preencher esse h3, com o que for preenchido no nome/sobrenome-->
+
+  <!-- Fizemos alguns exemplos diferentes de como podemos utilizar esse auto preenchimento-->
+  <input type="text" name="nomeCompleto" disabled> <!-- Input oculto.-->
+
+  <input type="hidden" name="nomeCompletoOculto"/><!-- Aqui ao invés de estar bloqueado, colocamos em um input escondido(hidden).-->
+
+
+ </div>
+</div>
+
+
+
+</body>
+</html>

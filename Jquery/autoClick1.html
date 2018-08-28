@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+   window.setInterval(function(){
+    $("button").click();
+   }, 1000);
+
+   $("button").click(function(){
+        var texto = "Hello World!";
+        $("body").append(texto);
+   });
+
+});
+</script>
+
+</head>
+<body>
+
+
+<button>AUTO CLICK</button>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Essa é abiblioteca para usarmos JQUERY-->
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"> <!-- Essa biblioteca apenas da estilos css-->
+<script> 
+$(document).ready(function(){
+	
+	//Ao clicarmos no botão com o id #normal faça:
+   $("#normal").click(function(){ 
+   
+		//Aqui faremos a requisição load para a pagina carregarLoad2.html, que irá retornar o conteudo com o id #opacityNormal
+		$("#foto").load('carregarLoad2.html #opacityNormal'); //
+   });
+   
+   $("#setenta").click(function(){//Ao clicarmos no botão com o id #setenta faça:
+   
+		//Aqui faremos a requisição load para a pagina carregarLoad2.html, que irá retornar o conteudo com o id #opacitySetentaCinco
+		$("#foto").load('carregarLoad2.html #opacitySetentaCinco');
+   });
+   
+   $("#sessenta").click(function(){//Ao clicarmos no botão com o id #sessenta faça:
+   
+	//Aqui faremos a requisição load para a pagina carregarLoad2.html, que irá retornar o conteudo com o id #opacitySessenta
+	$("#foto").load('carregarLoad2.html #opacitySessenta');
+   });
+   
+   $("#vinte").click(function(){//Ao clicarmos no botão com o id #vinte faça:
+   
+	//Aqui faremos a requisição load para a pagina carregarLoad2.html, que irá retornar o conteudo com o id #opacityVinteCinco
+	$("#foto").load('carregarLoad2.html #opacityVinteCinco');
+   });
+   
+   
+});
+</script>
+
+<style> 
+</style>
+</head>
+<body>
+
+<div class="w3-container w3-center">
+<button id="normal">Foto com opacity normal</button> <!-- Colocamos botões com ids.-->
+<button id="setenta">Foto com opacity 75%</button>
+<button id="sessenta">Foto com opacity 60%</button>
+<button id="vinte">Foto com opacity 25%</button>
+</div>
+<div id="foto"></div> <!-- Essa div é a que ira receber a foto que vai vir do carregarLoad2.html-->
+ 
+
+</body>
+</html>

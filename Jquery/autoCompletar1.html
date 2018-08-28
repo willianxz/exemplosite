@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").keyup(function(){ //Quando for pressionada uma tecla, quando ela subir, será feito esse procedimento:
+
+    	var digitos = $('input[name=nome]').val(); //Guardamos o valor que esta no input nesta variavel.
+
+    	//Aqui utilizaremos uma requisição do tipo GET para uma pagina .php processar essa informação
+    	//contida em nossa variavel.
+    	$.get('processarAutoCompletar1.php',{'nome':digitos},function(data){
+    		$("p").html(data);//Aqui adicionamos a resposta de nossa pagina .php em nosso parágrafo
+    	});        
+
+
+    });
+});
+</script>
+</head>
+<body>
+
+Nome: <input type="text" name="nome">
+
+<p>Entre com o seu nome.</p> <!-- Nesse nosso parágrafo irá ser alimentado pelas informações 
+vinda da pagina processarAutoCompletar1.php-->
+
+</body>
+</html>

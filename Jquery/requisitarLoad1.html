@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Essa é abiblioteca para usarmos JQUERY-->
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"> <!-- Essa biblioteca apenas da estilos css-->
+<script> 
+$(document).ready(function(){
+
+  $("img").click(function(){ //Quando a nossa imagem for clicada faça:
+
+    //Carregue o conteudo do arquivo php e revele o mesmo com um efeito de estilo slideToggle.
+    $("#conteudo").load('carregarLoad1.php').slideToggle("slow"); 
+
+    //OBS: Note que ao clicar novamente na nossa imagem, ela esconde o conteudo, isso graças ao efeito slideToggle.
+
+  });
+
+   $("img").mouseover(function(){ //Quando o mouse estiver sobre a nossa imagem faça:
+      $(this).css("cursor","Pointer"); //Altere o cursos do mouse, para mostrar que a imagem é clicavel.
+   });
+
+
+});
+</script>
+
+<style> 
+
+#conteudo{
+
+display: none; /* Aqui ja colocamos a nossa div  com os conteudos como oculta na página.*/
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="w3-container w3-center">
+
+   <!-- Colocamos a nossa imagem que será clicavel: -->
+   <img src="http://cdn-static.denofgeek.com/sites/denofgeek/files/styles/main_wide/public/6/27//stargate-movie-poster-1994.jpg?itok=KZ6k8TKb" width="500" height="500" />
+
+   <!-- Criamos a nossa div conteudo, para injetarmos conteudo nela.-->
+   <div id="conteudo"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Adicionamos a biblioteca jquery-->
+<script>    
+$(document).ready(function(){
+    $("button").click(function(){ //Quando clicar em um botão faça:      
+            
+           var nome = $('#nome').val(); //Aqui pegamos o id chamado nome e pegamos o valor contido no input
+           var email = $('#email').val(); //Aqui pegamos o id chamado email e pegamos o valor contido no input
+            
+           //Aqui fazemos nossa requisição do tipo POST
+           $.get('processar.php',{nome: nome,email: email},function(data){
+                
+               //Colocamos o conteudo retornado da requisição em nossa div com id conteudo
+               $('#conteudo').html(data); 
+                
+                //se quiser retire o comentario abaixo para ver a diferença.
+               //$('#formulario').hide(); //caso seja necessario esconder o formulario.             
+                
+           });
+            
+           //OBS: perceba que é a function(data), que retorna a resposta da 
+           //pagina processar.php
+        
+    });
+});
+</script>
+<style>
+    #conteudo{
+        background-color: #2ea100; //Flu Flu basico.
+    }
+</style>
+</head>
+<body>
+     
+    <!-- Criamos uma div qualquer que servira apenas para armazenar a resposta vinda da requisição.-->
+    <div id="conteudo"></div> 
+    <!-- Aqui colocamos nosso conteudo que faz a requisição dentro dessa div formulario.-->
+    <div id="formulario">
+         
+        <!-- IMPORTANTE: nosso exemplo esta funcionando com os id.-->
+        Nome:  <input type="text" name="nome" id="nome"/></br> 
+        Email: <input type="text" name="email" id="email"/></br>
+       <button>Cadastrar</button>
+    </div>
+   
+</body>
+</html>

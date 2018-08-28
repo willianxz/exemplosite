@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"> <!-- Essa biblioteca aqui é só pra poder usar as classes de responsividade.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Essa é a biblioteca do Jquery. -->
+<script> 
+$(document).ready(function(){
+
+	$("div").click(function(){
+		$(this).children().css("background-color","red");
+	});
+
+	$("div").dblclick(function(){
+		$(this).children().css("background-color","green");
+	});
+
+});
+
+</script>
+
+
+<style>
+
+div{
+	margin-bottom: 10px;
+}
+
+.verde{
+	background-color: green;
+}
+
+</style>
+ 
+</head>
+<body>
+
+	<div class="w3-row w3-container">
+		<div class="w3-col m12 verde w3-center">
+		<p>Ovos</p>
+		</div>
+	</div>
+
+	<div class="w3-row w3-container">
+		<div class="w3-col m12 verde w3-center">
+		<p>Batata</p>
+		</div>
+	</div>
+
+	<div class="w3-row w3-container">
+		<div class="w3-col m12 verde w3-center">
+		<p>Feijão</p>
+		</div>
+	</div>
+
+	<div class="w3-row w3-container">
+		<div class="w3-col m12 verde w3-center">
+		<p>Repolho</p>
+		</div>
+	</div>
+
+	<div class="w3-row w3-container">
+		<div class="w3-col m12 verde w3-center">
+		<p>Maça</p>
+		</div>
+	</div>
+
+
+</body>
+</html>

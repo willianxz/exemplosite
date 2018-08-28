@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"> <!-- Essa biblioteca aqui é só pra poder usar as classes de responsividade.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Essa é a biblioteca do Jquery. -->
+<script> 
+$(document).ready(function(){
+
+	$("div").click(function(){
+		$(this).css("height",200);
+	});
+
+	$("div").dblclick(function(){
+		$(this).css("height",22);
+	});
+
+});
+
+</script>
+
+
+<style>
+div{
+	height: 22px;
+}
+
+</style>
+ 
+</head>
+<body>
+
+	<div class="w3-row w3-container">
+		<div class="w3-col m12 w3-center ">
+			<div class="w3-col m2 w3-center w3-blue">Blue</div>
+			<div class="w3-col m2 w3-center w3-red">Red</div>
+			<div class="w3-col m2 w3-center w3-green">Green</div>
+			<div class="w3-col m2 w3-center w3-purple">Purple</div>
+			<div class="w3-col m2 w3-center w3-teal">Teal</div>
+			<div class="w3-col m2 w3-center w3-yellow">Yellow</div>
+		</div>		
+	</div>
+
+
+
+</body>
+</html>

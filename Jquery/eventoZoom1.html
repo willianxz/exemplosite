@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"> <!-- Essa biblioteca aqui é só pra poder usar as classes de responsividade.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Essa é a biblioteca do Jquery. -->
+<script> 
+$(document).ready(function(){
+
+	//Quando o mouse estiver sobre qualquer paragrafo faça:
+	$("p").hover(function(){ 
+		$(this).css('font-size',20); //Aumente a fonte desse paragrafo para 20px
+	}, function(){
+		$(this).css('font-size',14); //Volte a fonte desse paragrafo para 14px
+	}
+
+
+	);
+
+	//OBS: o $(this), se refere ao paragrafo atual ou seja somente aquele que o mouse esta sobre.
+
+});
+
+</script>
+
+
+<style>
+
+p{
+	font-size: 14px; /* Aqui ja iniciamos a fonte dos paragrafos como sendo 14px */
+	font-family: Arial; /* Flu Flu basico no estilo da fonte. */
+}
+</style>
+ 
+</head>
+<body>
+
+	<div class="w3-row">
+
+	<div class="w3-col w3-container m12">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum malesuada metus, sed molestie enim porttitor eget. Phasellus pretium nisi ut justo accumsan pulvinar. Proin porta, ipsum sed pharetra tristique, orci tortor condimentum libero, eu tempus odio augue in diam. Nam sed orci interdum, pellentesque leo eget, sagittis orci. Nam faucibus et odio eget rutrum. Phasellus in quam eu mi vehicula maximus nec eu erat. 
+		</p>
+
+		<p>Nulla vestibulum condimentum consectetur. Vivamus eget tempus augue. Aliquam rhoncus fringilla tortor, vel dapibus velit facilisis at. Suspendisse finibus placerat quam, at finibus dui facilisis nec. Sed risus mi, suscipit quis sem vulputate, varius interdum neque.
+		</p>
+
+		<p>Duis eu libero non nunc feugiat venenatis. Aenean lacinia euismod placerat. Aliquam nec libero cursus, elementum nunc luctus, dictum dui. Integer dapibus nec sapien dapibus venenatis. Maecenas cursus erat neque, eget ornare ipsum commodo sed. Quisque porttitor pulvinar sem sed suscipit. Praesent diam turpis, tincidunt vitae nisi ac, vehicula malesuada ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse dignissim augue id ante pharetra, id dictum ipsum iaculis. Praesent interdum consequat purus in aliquet. Proin leo magna, elementum efficitur orci quis, efficitur bibendum ligula. Aenean lacinia ut ligula ac ultrices.
+		</p>
+
+		<p>n porttitor tempor urna in gravida. Vivamus faucibus consequat purus ac semper. Proin sed porttitor ligula. Fusce pellentesque orci et tortor fringilla, ac imperdiet neque aliquam.
+		</p>
+
+		<p>Quisque sed nisi id justo tristique maximus. Duis congue sapien nec enim tincidunt varius. Pellentesque congue condimentum tincidunt. Proin pellentesque fermentum tortor, et tincidunt purus aliquet a.
+		</p>
+
+		<p>In hac habitasse platea dictumst. Curabitur molestie ex ac mollis pretium. In hac habitasse platea dictumst. Mauris hendrerit, turpis et convallis gravida, urna eros condimentum ex, vel egestas justo nibh vel mi. Etiam lorem nisi, laoreet eget consequat venenatis, tristique sed dui. Integer eu consectetur tellus, et sodales arcu. Morbi non iaculis nunc. Fusce pretium suscipit urna gravida pretium. Duis ac molestie arcu, pharetra molestie libero. Phasellus aliquet quam dui, vestibulum vulputate libero laoreet sed. Sed convallis fringilla diam at placerat. Vivamus vehicula turpis libero, et fringilla arcu convallis sagittis. Praesent id libero gravida libero volutpat condimentum at vitae ipsum. Cras aliquam est ligula, eu ultricies nibh ornare faucibus. Sed rutrum urna vel pellentesque malesuada. Integer commodo neque porta magna tristique, sit amet imperdiet est faucibus.
+
+		</p>
+
+	</div>
+
+
+
+</body>
+</html>

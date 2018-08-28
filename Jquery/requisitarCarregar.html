@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#clicar").click(function(){	//Ao ser clicado a nossa div com id "clicar" faça: 
+		
+		//Aqui fazemos uma requisição GET para a nossa pagína processar.php
+		$.get('processarCarregar.php',function(data){ 	
+			$("#conteudo").html(data);	//Adicionamos a resposta da pagina processar.php na nossa div conteudo.
+			$("#conteudo").slideDown("slow"); //Aqui apenas fazemos um efeito visual de animacao.
+			
+		});
+        
+    });
+});
+</script>
+ 
+<style> 
+#conteudo, #clicar {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#conteudo {
+    padding: 50px;
+    display: none;
+}
+
+img{
+	width: 300px;
+	height: 300px;
+	box-shadow: 10px 10px 5px #888888;
+
+}
+</style>
+</head>
+<body>
+ 
+<div id="clicar">Clique aqui para ver os produtos</div> <!-- Essa div sera clicavel.-->
+<div id="conteudo"></div> <!-- Essa div serve para armazenar a resposta da pagína processar.php -->
+
+</body>
+</html>

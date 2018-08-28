@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+
+	//Quando ser colocado o mouse estiver sobre algum elemento, no noso caso a imagem com essa classe zoom faça:
+    $(".zoom").hover(function(){ 
+    	$(this).height(1000);	//Aumente a altura para 1000px;
+    	$(this).width(1000);	//Aumente a largura para 1000px;
+    },function(){	//Se o mouse sair do elemento faça:
+
+    	$(this).height(500); //Volte a autura para 400px;
+    	$(this).width(500); //Volte a largura para 500px;
+    });
+});
+</script>
+ 
+<style> 
+
+img {
+	width: 500px;	/* Toda a imagem ja irá vir com a largura e a altura com 500px*/
+	height: 500px;
+	margin-top: 20px; /* Aqui damos uma margin ao topo da imagem.*/
+}
+
+div{
+	margin-top: 5px; /* As div teram 5px de margin no topo.*/
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="w3-row" >
+	  <div class="w3-col m12 w3-center w3-yellow">	  
+		<img src="http://blogs.gazetaonline.com.br/dicasdalucy/wp-content/uploads/sites/50/2013/05/casa_campo_fechada_cheiro_ruim_casa_praia.jpg" class="zoom">		
+		<p>Tipo: Casa</p>
+		<p>Cidade: Florianópolis</p>
+		<p>Bairro: Rio Tavares</p>
+		<p>Estado: Preservada</p>
+		<p>Valor: R$ 3000.00,00</p>	
+	  </div>  
+</div>
+
+
+<div class="w3-row">
+	  <div class="w3-col m12 w3-center w3-green">	  
+		<img src="http://s2.glbimg.com/wRlgdrr-TrKebAg5SmCgZ94mYio=/620x0/s.glbimg.com/jo/eg/f/original/2016/12/21/mg_4964.jpg" class="zoom">		
+		<p>Tipo: Casa</p>
+		<p>Cidade: Florianópolis</p>
+		<p>Bairro: Rio Tavares</p>
+		<p>Estado: Preservada</p>
+		<p>Valor: R$ 3000.00,00</p>	
+	  </div>  
+</div>
+
+<div class="w3-row">
+	  <div class="w3-col m12 w3-center w3-blue">	  
+		<img src="https://i.ytimg.com/vi/lMyOgNUKNlc/maxresdefault.jpg" class="zoom">		
+		<p>Tipo: Casa</p>
+		<p>Cidade: Florianópolis</p>
+		<p>Bairro: Rio Tavares</p>
+		<p>Estado: Preservada</p>
+		<p>Valor: R$ 3000.00,00</p>	
+	  </div>  
+</div>
+
+<!-- OBS: Note que colocamos nas imagens a nossa classe zoom, isso que irá importar.-->
+ 
+<!-- Por termos colocado esse evento em uma classe ao invés de em um id, podemos aplicar esse efeito a mais de um elemento.
+	no nosso caso, em varias imagens.
+-->
+
+</body>
+</html>

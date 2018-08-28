@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"> <!-- Essa biblioteca aqui é só pra poder usar as classes de responsividade.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Essa é a biblioteca do Jquery. -->
+<script> 
+$(document).ready(function(){
+
+	//Quando nossa imagem com a classe lupax2 for clicada faça:
+	$(".lupax2").click(function(){ 
+		$("#imgPrincipal").width(500); //Coloque nossa imagem principal com o largura normal definida pelo nosso css.
+		$("#imgPrincipal").height(500); //Coloque nossa imagem principal com o altura normal definida pelo nosso css.
+	});
+
+	//Quando nossa imagem com a classe lupax3 for clicada faça:
+	$(".lupax3").click(function(){
+		$("#imgPrincipal").width(700); //Coloque nossa imagem principal com a largura de 700px.
+		$("#imgPrincipal").height(700);  //Coloque nossa imagem principal com a altura de 700px.
+	});
+
+	//Quando nossa imagem com a classe lupax5 for clicada faça:
+	$(".lupax5").click(function(){
+		$("#imgPrincipal").width(1000); //Coloque nossa imagem principal com a largura de 1000px.
+		$("#imgPrincipal").height(1000); //Coloque nossa imagem principal com a altura de 1000px.
+	});
+
+});
+
+</script>
+
+
+<style>
+
+#imgPrincipal{
+	width: 500px;
+	height: 500px;
+}
+
+img{
+	width: 100px;
+	height: 100px;
+}
+
+
+</style>
+ 
+</head>
+<body>
+
+	<div class="w3-row w3-container">
+		<div class="w3-col m12 w3-center ">
+			<div class="w3-col">
+			<img src="http://www.leiaja.com/sites/default/files/styles/large/public/field/image/noticias/2012/09/shutterstock_61077907.jpg" id="imgPrincipal"/>
+			</div>
+		</div>		
+	</div>
+
+
+ <div class="w3-row w3-container ">
+		<div class="w3-col m12 w3-center ">
+			<div class="w3-col m4 w3-green">
+			 <img src="http://www.iconesbr.net/iconesbr/2008/07/245/245_256x256.png" class="lupax2"/>
+			 x2
+			</div>
+
+			<div class="w3-col m4 w3-yellow">
+			  <img src="http://www.iconesbr.net/iconesbr/2008/07/245/245_256x256.png" class="lupax3"/>
+			  x3
+			</div>
+
+			<div class="w3-col m4 w3-red">
+			  <img src="http://www.iconesbr.net/iconesbr/2008/07/245/245_256x256.png" class="lupax5"/>
+			  x5
+			</div>
+		</div>		
+	</div>
+
+
+
+</body>
+</html>

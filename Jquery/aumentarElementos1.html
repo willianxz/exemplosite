@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+   window.setInterval(function(){
+   	var valorborderradios = $("div").css("border-radius");
+   	var valorwidth = $("div").css("width");
+   	var valorheight = $("div").css("height");
+
+   	var configuracao = "Border-radius : "+valorborderradios+ "<br/>"+" Width: "+valorwidth+ "<br/>" + "Height: "+ valorheight;
+
+	    $("div").css("width","+=10");
+	    $("div").css("height","+=10");
+	    $("div").css("border-radius","+=10");
+    
+    
+	if(parseInt(valorwidth) === 600){
+		$("div").css("background-color", "yellow");
+	}
+
+	if(parseInt(valorwidth) === 650){
+		$("div").css("background-color", "orange");
+	}
+
+	if(parseInt(valorwidth) === 680){
+		$("div").css("background-color", "red");
+	}
+
+	if(parseInt(valorwidth) === 700){
+		$("div").css("width","300");
+		$("div").css("height","300");
+		$("div").css("border-radius","0");
+		$("div").css("background-color","green");	
+		valorborderradios = 0;	
+		valorwidth = 0;	
+		valorheight = 0;
+		configuracao = "Border-radius : "+valorborderradios+ "<br/>"+" Width: "+valorwidth+ "<br/>" + "Height: "+ valorheight;
+	}
+
+
+    $("span").html(configuracao);
+
+
+   }, 1000);
+
+   
+
+});
+</script>
+
+<style>
+div{
+    background-color: green;
+    width: 300px;
+    height: 300px;
+
+}
+</style>
+</head>
+<body>
+
+<div></div>
+<span></span>
+</body>
+</html>
